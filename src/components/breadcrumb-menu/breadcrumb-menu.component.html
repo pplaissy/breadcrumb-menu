@@ -1,0 +1,11 @@
+@if (model) {
+    <div class="flex align-items-center">
+        @for (item of model.path; track $index) {
+            @if (item.depth > 0) {
+                <i class="pi pi-angle-right"></i>
+            }
+            <breadcrumb-menu-set [model]="item"/>
+        }
+    </div>
+}
+

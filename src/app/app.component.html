@@ -1,0 +1,16 @@
+<div class="flex flex-column gap-2">
+    <a href="https://primeng.org/menubar" target="_blank">Primeng Menubar</a>
+    <p-menubar [model]="mbItems"></p-menubar>
+    <a href="https://primeng.org/breadcrumb" target="_blank">Primeng Breadcrumb</a>
+    <p-breadcrumb class="max-w-full" [model]="bcItems" [home]="bcHome"></p-breadcrumb>
+    <p-panel header="Menubar & Breadcrumb mix">
+        <p>
+            Each segment of the breadcrumb is a menu level. 
+            When an item is selected, an additional level is added to the breadcrumb with the children of the selected item, and this level opens automatically to smooth the selection.
+            The cycle ends when the last item selected has no children.
+            You can return to any level of the breadcrumb and follow a different path.
+            If the breadcrumb loses focus before the selection cycle is complete, the first item is selected by default.
+        </p>
+        <breadcrumb-menu [model]="breadcrumbMenu"/>
+    </p-panel>
+</div>
